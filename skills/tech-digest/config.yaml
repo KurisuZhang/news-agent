@@ -1,0 +1,242 @@
+sources:
+  - name: zhihu
+    url: https://decemberpei.cyou/rssbox/zhihu.xml
+    language: zh
+  - name: cnblogs # 博客园
+    url: https://feed.cnblogs.com/blog/sitehome/rss
+    language: zh
+  - name: v2ex
+    url: https://rsshub.liumingye.cn/v2ex/tab/tech
+    language: zh
+  - name: solidot # 奇客Solidot
+    url: https://www.solidot.org/index.rss
+    language: zh
+  - name: infoq # InfoQ 中文
+    url: https://www.infoq.cn/feed
+    language: zh
+  - name: github
+    url: https://mshibanami.github.io/GitHubTrendingRSS/daily/all.xml
+    language: en
+
+
+filter_keywords:
+  - 震惊
+  - 不敢相信
+  - 颠覆认知
+  - 看完沉默
+  - 求扩散
+  - 广告
+  - 推广
+
+
+scoring:
+  freshness_weight: 0.6
+  keyword_weight: 0.4
+  top_n: 10          # 每个维度取前 N 条（全局评分后按维度配额）
+  freshness_decay_hours: 48
+
+# ──────────────────────────────────────────────
+# tech_keywords: 控制「要不要这条」（打分用）
+# 命中越多分越高，偏重 AI/Agent、编程语言与框架、基础设施
+# ──────────────────────────────────────────────
+tech_keywords:
+  # AI / LLM / Agent
+  - AI
+  - LLM
+  - GPT
+  - 大模型
+  - Agent
+  - RAG
+  - embedding
+  - MCP
+  - Claude
+  - Gemini
+  - Llama
+  - Mistral
+  - vibe coding
+  - LangChain
+  - LangGraph
+  - Claude Code
+  - fine-tune
+  - LoRA
+  - transformer
+  - Ollama
+  - 智能体
+  - 多模态
+  # 框架 / 语言
+  - Python
+  - Java
+  - Spring
+  - Go
+  - TypeScript
+  - JavaScript
+  - React
+  - Vue
+  - Node.js
+  - Next.js
+  - FastAPI
+  - Django
+  - Kotlin
+  # 运维 / 基础设施
+  - Docker
+  - Kubernetes
+  - k8s
+  - Linux
+  - Nginx
+  - Redis
+  - MySQL
+  - PostgreSQL
+  - DevOps
+  - CI/CD
+  - 云原生
+  - 微服务
+  - 容器
+  # 通用技术
+  - GitHub
+  - 开源
+  - API
+  - SDK
+  - CLI
+  - 算法
+  - 架构
+
+# ──────────────────────────────────────────────
+# categories: 控制「放哪个桶」（分类用）
+# 分两大维度：科技技术 vs 实时新闻
+# ──────────────────────────────────────────────
+default_category: 科技技术   # 无关键词命中时的兜底分类
+
+categories:
+  科技技术:
+    # AI / LLM / Agent 工具与实践
+    - AI
+    - LLM
+    - GPT
+    - 大模型
+    - Agent
+    - RAG
+    - embedding
+    - MCP
+    - Claude
+    - Gemini
+    - Llama
+    - 模型
+    - transformer
+    - fine-tune
+    - LoRA
+    - Ollama
+    - LangChain
+    - LangGraph
+    - Claude Code
+    - vibe coding
+    - 智能体
+    - 多模态
+    - 推理
+    # 语言 / 框架
+    - Python
+    - Java
+    - Spring
+    - Go
+    - Rust
+    - TypeScript
+    - JavaScript
+    - React
+    - Vue
+    - Node.js
+    - Next.js
+    - FastAPI
+    - Django
+    - Kotlin
+    - Swift
+    - CSS
+    - HTML
+    - 前端
+    - 全栈
+    - 框架
+    - 算法
+    - 教程
+    - tutorial
+    # 运维 / 基础设施
+    - Docker
+    - Kubernetes
+    - k8s
+    - Linux
+    - Redis
+    - Nginx
+    - MySQL
+    - PostgreSQL
+    - DevOps
+    - 云原生
+    - 微服务
+    - 容器
+    - 部署
+    # 开源 / 工具
+    - GitHub
+    - 开源
+    - open source
+    - release
+    - library
+    - framework
+    - CLI
+    - SDK
+    - API
+    - 工具
+    - 插件
+    - 架构
+    - 性能
+  实时新闻:
+    # 商业 / 资本事件
+    - 融资
+    - 裁员
+    - 收购
+    - IPO
+    - 估值
+    - 股价
+    - 涨价
+    - 降价
+    - 大厂
+    - 宣布
+    - 发布会
+    # 法律 / 政策
+    - 争议
+    - 起诉
+    - 诉讼
+    - 监管
+    - 政策
+    - 隐私
+    - 违规
+    - 罚款
+    - 垄断
+    - 数据泄露
+    - 关税
+    - 制裁
+    - 禁令
+    - 丑闻
+    - 造假
+    # 知乎式讨论 / 热点
+    - 如何看待
+    - 为什么
+    - 怎么看
+    - 热榜
+    - 报告
+    - 调查
+    - 研究发现
+    - 揭示
+    - 认为
+    # 公司名（新闻语境）
+    - 苹果
+    - 谷歌
+    - 微软
+    - 百度
+    - 阿里
+    - 腾讯
+    - 字节
+    - 华为
+    - 小米
+    - OpenAI
+    - Anthropic
+    - Meta
+    - Google
+    - Microsoft
+    - Apple
+    - Nvidia
